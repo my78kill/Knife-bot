@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Knife Throw</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: #111;
+      color: white;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Knife Throw 🔪</h1>
+<p>Click button to finish game</p>
+
+<button onclick="finishGame()">Finish Game (Score 200)</button>
+
+<script>
+function finishGame() {
+  TelegramGameProxy.postEvent('score', JSON.stringify({
+    score: 200
+  }));
+}
+</script>
+
+</body>
+</html>
